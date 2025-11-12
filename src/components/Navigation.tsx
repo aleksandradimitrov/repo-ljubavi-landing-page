@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Camera } from "lucide-react";
+import { Camera, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const Navigation = () => {
   return (
@@ -21,6 +22,12 @@ const Navigation = () => {
             <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
               Contact
             </Link>
+            <Button variant="hero" size="sm" className="ml-2" asChild>
+              <Link to="/contact" className="flex items-center gap-2">
+                <Sparkles className="h-4 w-4" />
+                Try Demo Free
+              </Link>
+            </Button>
           </div>
         </div>
       </div>
