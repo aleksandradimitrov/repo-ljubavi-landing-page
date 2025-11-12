@@ -7,8 +7,11 @@ import weddingEvent from "@/assets/wedding-event.jpg";
 import birthdayEvent from "@/assets/birthday-event.jpg";
 import corporateEvent from "@/assets/corporate-event.jpg";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Index = () => {
+  const { t } = useLanguage();
+  
   return (
     <div className="min-h-screen">
       <Navigation />
@@ -27,17 +30,17 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Share Every Moment Together
+              {t.hero.title}
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Capture and share magical memories at your events. Perfect for weddings, birthdays, and special celebrations.
+              {t.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="hero" size="lg" asChild>
-                <Link to="/contact">Get Started</Link>
+                <Link to="/contact">{t.hero.getStarted}</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/about">Learn More</Link>
+                <Link to="/about">{t.hero.learnMore}</Link>
               </Button>
             </div>
           </div>
@@ -48,9 +51,9 @@ const Index = () => {
       <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose EventSnap?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.features.title}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              The easiest way to collect and share photos from your special events
+              {t.features.subtitle}
             </p>
           </div>
           
@@ -60,9 +63,9 @@ const Index = () => {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <Camera className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Easy Upload</h3>
+                <h3 className="text-xl font-semibold mb-2">{t.features.easyUpload.title}</h3>
                 <p className="text-muted-foreground">
-                  Guests can instantly share photos from their phones during the event
+                  {t.features.easyUpload.description}
                 </p>
               </CardContent>
             </Card>
@@ -72,9 +75,9 @@ const Index = () => {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <Users className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Shared Albums</h3>
+                <h3 className="text-xl font-semibold mb-2">{t.features.sharedAlbums.title}</h3>
                 <p className="text-muted-foreground">
-                  Create collaborative albums where everyone can contribute their favorite shots
+                  {t.features.sharedAlbums.description}
                 </p>
               </CardContent>
             </Card>
@@ -84,9 +87,9 @@ const Index = () => {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <Share2 className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Instant Sharing</h3>
+                <h3 className="text-xl font-semibold mb-2">{t.features.instantSharing.title}</h3>
                 <p className="text-muted-foreground">
-                  Share memories with all guests immediately after the event
+                  {t.features.instantSharing.description}
                 </p>
               </CardContent>
             </Card>
@@ -96,9 +99,9 @@ const Index = () => {
                 <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-primary/10 flex items-center justify-center">
                   <Heart className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Cherish Forever</h3>
+                <h3 className="text-xl font-semibold mb-2">{t.features.cherish.title}</h3>
                 <p className="text-muted-foreground">
-                  Keep all your precious memories in one beautiful, organized place
+                  {t.features.cherish.description}
                 </p>
               </CardContent>
             </Card>
@@ -107,12 +110,12 @@ const Index = () => {
       </section>
 
       {/* Event Showcase Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">See EventSnap in Action</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.showcase.title}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              From intimate gatherings to grand celebrations, EventSnap makes every moment shareable
+              {t.showcase.subtitle}
             </p>
           </div>
           
@@ -124,7 +127,7 @@ const Index = () => {
                 className="w-full h-64 object-cover transition-transform group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
-                <h3 className="text-xl font-semibold text-foreground">Weddings</h3>
+                <h3 className="text-xl font-semibold text-foreground">{t.showcase.weddings}</h3>
               </div>
             </div>
             
@@ -135,7 +138,7 @@ const Index = () => {
                 className="w-full h-64 object-cover transition-transform group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
-                <h3 className="text-xl font-semibold text-foreground">Birthdays</h3>
+                <h3 className="text-xl font-semibold text-foreground">{t.showcase.birthdays}</h3>
               </div>
             </div>
             
@@ -146,7 +149,7 @@ const Index = () => {
                 className="w-full h-64 object-cover transition-transform group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex items-end p-6">
-                <h3 className="text-xl font-semibold text-foreground">Corporate Events</h3>
+                <h3 className="text-xl font-semibold text-foreground">{t.showcase.corporate}</h3>
               </div>
             </div>
           </div>
@@ -154,12 +157,12 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20">
+      <section className="py-20 bg-muted/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t.testimonials.title}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Real stories from event hosts who made their celebrations unforgettable
+              {t.testimonials.subtitle}
             </p>
           </div>
           
@@ -172,15 +175,15 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  "EventSnap made our wedding unforgettable! All our guests could instantly share their photos, and we got to see the day from everyone's perspective. Absolutely amazing!"
+                  {t.testimonials.sarah.text}
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                     <span className="text-primary font-semibold">SJ</span>
                   </div>
                   <div>
-                    <p className="font-semibold">Sarah Johnson</p>
-                    <p className="text-sm text-muted-foreground">Wedding - June 2024</p>
+                    <p className="font-semibold">{t.testimonials.sarah.name}</p>
+                    <p className="text-sm text-muted-foreground">{t.testimonials.sarah.event}</p>
                   </div>
                 </div>
               </CardContent>
@@ -194,15 +197,15 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  "Perfect for our company retreat! Everyone could contribute photos, and we created an incredible shared album that captured the entire experience."
+                  {t.testimonials.michael.text}
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                     <span className="text-primary font-semibold">MC</span>
                   </div>
                   <div>
-                    <p className="font-semibold">Michael Chen</p>
-                    <p className="text-sm text-muted-foreground">Corporate Event - August 2024</p>
+                    <p className="font-semibold">{t.testimonials.michael.name}</p>
+                    <p className="text-sm text-muted-foreground">{t.testimonials.michael.event}</p>
                   </div>
                 </div>
               </CardContent>
@@ -216,15 +219,15 @@ const Index = () => {
                   ))}
                 </div>
                 <p className="text-muted-foreground mb-4">
-                  "My daughter's 21st birthday was captured beautifully! We have memories from all her friends and family in one place. Such a wonderful keepsake!"
+                  {t.testimonials.emily.text}
                 </p>
                 <div className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                     <span className="text-primary font-semibold">EP</span>
                   </div>
                   <div>
-                    <p className="font-semibold">Emily Parker</p>
-                    <p className="text-sm text-muted-foreground">Birthday - September 2024</p>
+                    <p className="font-semibold">{t.testimonials.emily.name}</p>
+                    <p className="text-sm text-muted-foreground">{t.testimonials.emily.event}</p>
                   </div>
                 </div>
               </CardContent>
@@ -234,17 +237,17 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Create Unforgettable Memories?
+              {t.cta.title}
             </h2>
             <p className="text-muted-foreground mb-8">
-              Join thousands of happy event hosts who trust EventSnap to capture their special moments
+              {t.cta.subtitle}
             </p>
             <Button variant="hero" size="lg" asChild>
-              <Link to="/contact">Start Your Event</Link>
+              <Link to="/contact">{t.cta.button}</Link>
             </Button>
           </div>
         </div>
@@ -254,7 +257,7 @@ const Index = () => {
       <footer className="border-t border-border py-8">
         <div className="container mx-auto px-4">
           <div className="text-center text-muted-foreground">
-            <p>&copy; 2024 EventSnap. All rights reserved.</p>
+            <p>{t.footer.copyright}</p>
           </div>
         </div>
       </footer>
