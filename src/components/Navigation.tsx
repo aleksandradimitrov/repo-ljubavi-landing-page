@@ -6,7 +6,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Navigation = () => {
   const { t } = useLanguage();
-  
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 py-4">
@@ -15,7 +15,7 @@ const Navigation = () => {
             <Camera className="h-6 w-6 text-primary" />
             <span>EventSnap</span>
           </Link>
-          
+
           <div className="flex items-center gap-4">
             <div className="hidden md:flex items-center gap-6">
               <Link to="/" className="text-foreground hover:text-primary transition-colors">
@@ -30,7 +30,7 @@ const Navigation = () => {
             </div>
             <LanguageSwitcher />
             <Button variant="hero" size="sm" asChild>
-              <Link to="/contact" className="flex items-center gap-2">
+              <Link to="/demo" className="flex items-center gap-2">
                 <Sparkles className="h-4 w-4" />
                 <span className="hidden sm:inline">{t.nav.demo}</span>
               </Link>

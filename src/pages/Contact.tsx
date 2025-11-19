@@ -8,19 +8,42 @@ import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
   const { t } = useLanguage();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success("Message sent! We'll get back to you soon.");
-    setFormData({ name: "", email: "", message: "" });
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from('requests')
+        .insert([
+          {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message,
+          },
+        ]);
+
+      if (error) throw error;
+
+      toast.success("Message sent! We'll get back to you soon.");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -33,7 +56,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen">
       <Navigation />
-      
+
       <main className="pt-24 pb-20">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
@@ -62,6 +85,7 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder={t.contact.form.name}
                         required
+                        disabled={isSubmitting}
                       />
                     </div>
                     <div className="space-y-2">
@@ -73,6 +97,7 @@ const Contact = () => {
                         onChange={handleChange}
                         placeholder={t.contact.form.email}
                         required
+                        disabled={isSubmitting}
                       />
                     </div>
                     <div className="space-y-2">
@@ -84,10 +109,11 @@ const Contact = () => {
                         placeholder={t.contact.form.message}
                         rows={5}
                         required
+                        disabled={isSubmitting}
                       />
                     </div>
-                    <Button type="submit" className="w-full" variant="hero">
-                      {t.contact.form.send}
+                    <Button type="submit" className="w-full" variant="hero" disabled={isSubmitting}>
+                      {isSubmitting ? "Sending..." : t.contact.form.send}
                     </Button>
                   </form>
                 </CardContent>
