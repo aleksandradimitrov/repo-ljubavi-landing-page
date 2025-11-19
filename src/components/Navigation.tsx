@@ -3,6 +3,7 @@ import { Camera, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const Navigation = () => {
   const { t } = useLanguage();
@@ -13,7 +14,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 text-xl font-bold text-foreground hover:text-primary transition-colors">
             <Camera className="h-6 w-6 text-primary" />
-            <span>EventSnap</span>
+            <span>RepoLjubavi</span>
           </Link>
 
           <div className="flex items-center gap-4">
@@ -28,6 +29,7 @@ const Navigation = () => {
                 {t.nav.contact}
               </Link>
             </div>
+            <ThemeToggle />
             <LanguageSwitcher />
             <Button variant="hero" size="sm" asChild>
               <Link to="/demo" className="flex items-center gap-2">

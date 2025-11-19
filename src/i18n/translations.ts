@@ -15,7 +15,7 @@ export const translations = {
       learnMore: 'Learn More',
     },
     features: {
-      title: 'Why Choose EventSnap?',
+      title: 'Why Choose RepoLjubavi?',
       subtitle: 'The easiest way to collect and share photos from your special events',
       easyUpload: {
         title: 'Easy Upload',
@@ -35,8 +35,8 @@ export const translations = {
       },
     },
     showcase: {
-      title: 'See EventSnap in Action',
-      subtitle: 'From intimate gatherings to grand celebrations, EventSnap makes every moment shareable',
+      title: 'See RepoLjubavi in Action',
+      subtitle: 'From intimate gatherings to grand celebrations, RepoLjubavi makes every moment shareable',
       weddings: 'Weddings',
       birthdays: 'Birthdays',
       corporate: 'Corporate Events',
@@ -45,7 +45,7 @@ export const translations = {
       title: 'What Our Users Say',
       subtitle: 'Real stories from event hosts who made their celebrations unforgettable',
       sarah: {
-        text: 'EventSnap made our wedding unforgettable! All our guests could instantly share their photos, and we got to see the day from everyone\'s perspective. Absolutely amazing!',
+        text: 'RepoLjubavi made our wedding unforgettable! All our guests could instantly share their photos, and we got to see the day from everyone\'s perspective. Absolutely amazing!',
         name: 'Sarah Johnson',
         event: 'Wedding - June 2024',
       },
@@ -62,18 +62,18 @@ export const translations = {
     },
     cta: {
       title: 'Ready to Create Unforgettable Memories?',
-      subtitle: 'Join thousands of happy event hosts who trust EventSnap to capture their special moments',
+      subtitle: 'Join thousands of happy event hosts who trust RepoLjubavi to capture their special moments',
       button: 'Start Your Event',
     },
     footer: {
-      copyright: '© 2024 EventSnap. All rights reserved.',
+      copyright: '© 2024 RepoLjubavi. All rights reserved.',
     },
     about: {
-      title: 'About EventSnap',
+      title: 'About RepoLjubavi',
       subtitle: 'Making memories accessible and shareable',
       story: {
         title: 'Our Story',
-        text: 'EventSnap was born from a simple idea: every guest at an event captures unique moments that deserve to be shared. We created a platform that makes it effortless to collect and share all those special memories in one beautiful place.',
+        text: 'RepoLjubavi was born from a simple idea: every guest at an event captures unique moments that deserve to be shared. We created a platform that makes it effortless to collect and share all those special memories in one beautiful place.',
       },
       mission: {
         title: 'Our Mission',
@@ -96,7 +96,7 @@ export const translations = {
       info: {
         title: 'Contact Information',
         email: 'Email',
-        emailValue: 'hello@eventsnap.com',
+        emailValue: 'hello@repoljubavi.com',
         phone: 'Phone',
         phoneValue: '+1 (555) 123-4567',
         address: 'Address',
@@ -118,7 +118,7 @@ export const translations = {
       learnMore: 'Saznajte Više',
     },
     features: {
-      title: 'Zašto Izabrati EventSnap?',
+      title: 'Zašto Izabrati RepoLjubavi?',
       subtitle: 'Najlakši način da prikupite i podelite fotografije sa svojih posebnih događaja',
       easyUpload: {
         title: 'Lako Postavljanje',
@@ -138,8 +138,8 @@ export const translations = {
       },
     },
     showcase: {
-      title: 'Pogledajte EventSnap na Delu',
-      subtitle: 'Od intimnih skupova do velikih proslava, EventSnap čini svaki trenutak deljivim',
+      title: 'Pogledajte RepoLjubavi na Delu',
+      subtitle: 'Od intimnih skupova do velikih proslava, RepoLjubavi čini svaki trenutak deljivim',
       weddings: 'Venčanja',
       birthdays: 'Rođendani',
       corporate: 'Korporativni Događaji',
@@ -148,7 +148,7 @@ export const translations = {
       title: 'Šta Naši Korisnici Kažu',
       subtitle: 'Prave priče od domaćina događaja koji su učinili svoje proslave nezaboravnim',
       sarah: {
-        text: 'EventSnap je učinio naše venčanje nezaboravnim! Svi naši gosti su mogli odmah da podele svoje fotografije, a mi smo videli dan iz perspektive svih. Apsolutno neverovatno!',
+        text: 'RepoLjubavi je učinio naše venčanje nezaboravnim! Svi naši gosti su mogli odmah da podele svoje fotografije, a mi smo videli dan iz perspektive svih. Apsolutno neverovatno!',
         name: 'Sara Jovanović',
         event: 'Venčanje - Jun 2024',
       },
@@ -165,18 +165,18 @@ export const translations = {
     },
     cta: {
       title: 'Spremni da Napravite Nezaboravne Uspomene?',
-      subtitle: 'Pridružite se hiljadama srećnih domaćina događaja koji veruju EventSnap-u da zabeleži njihove posebne trenutke',
+      subtitle: 'Pridružite se hiljadama srećnih domaćina događaja koji veruju RepoLjubavi-u da zabeleži njihove posebne trenutke',
       button: 'Počnite Vaš Događaj',
     },
     footer: {
-      copyright: '© 2024 EventSnap. Sva prava zadržana.',
+      copyright: '© 2024 RepoLjubavi. Sva prava zadržana.',
     },
     about: {
-      title: 'O EventSnap-u',
+      title: 'O RepoLjubavi-u',
       subtitle: 'Čineći uspomene dostupnim i deljivim',
       story: {
         title: 'Naša Priča',
-        text: 'EventSnap je nastao iz jednostavne ideje: svaki gost na događaju hvata jedinstvene trenutke koji zaslužuju da budu podeljeni. Kreirali smo platformu koja olakšava prikupljanje i deljenje svih tih posebnih uspomena na jednom lepom mestu.',
+        text: 'RepoLjubavi je nastao iz jednostavne ideje: svaki gost na događaju hvata jedinstvene trenutke koji zaslužuju da budu podeljeni. Kreirali smo platformu koja olakšava prikupljanje i deljenje svih tih posebnih uspomena na jednom lepom mestu.',
       },
       mission: {
         title: 'Naša Misija',
@@ -199,7 +199,7 @@ export const translations = {
       info: {
         title: 'Kontakt Informacije',
         email: 'Email',
-        emailValue: 'zdravo@eventsnap.com',
+        emailValue: 'zdravo@repoljubavi.com',
         phone: 'Telefon',
         phoneValue: '+381 (11) 123-4567',
         address: 'Adresa',
@@ -221,7 +221,7 @@ export const translations = {
       learnMore: 'Научете Повече',
     },
     features: {
-      title: 'Защо Да Изберете EventSnap?',
+      title: 'Защо Да Изберете RepoLjubavi?',
       subtitle: 'Най-лесният начин да събирате и споделяте снимки от вашите специални събития',
       easyUpload: {
         title: 'Лесно Качване',
@@ -241,8 +241,8 @@ export const translations = {
       },
     },
     showcase: {
-      title: 'Вижте EventSnap в Действие',
-      subtitle: 'От интимни събирания до грандиозни празненства, EventSnap прави всеки момент споделим',
+      title: 'Вижте RepoLjubavi в Действие',
+      subtitle: 'От интимни събирания до грандиозни празненства, RepoLjubavi прави всеки момент споделим',
       weddings: 'Сватби',
       birthdays: 'Рождени Дни',
       corporate: 'Корпоративни Събития',
@@ -251,7 +251,7 @@ export const translations = {
       title: 'Какво Казват Нашите Потребители',
       subtitle: 'Реални истории от домакини на събития, които направиха празненствата си незабравими',
       sarah: {
-        text: 'EventSnap направи нашата сватба незабравима! Всички наши гости можеха незабавно да споделят снимките си и ние видяхме деня от гледната точка на всички. Абсолютно невероятно!',
+        text: 'RepoLjubavi направи нашата сватба незабравима! Всички наши гости можеха незабавно да споделят снимките си и ние видяхме деня от гледната точка на всички. Абсолютно невероятно!',
         name: 'Сара Иванова',
         event: 'Сватба - Юни 2024',
       },
@@ -268,18 +268,18 @@ export const translations = {
     },
     cta: {
       title: 'Готови ли Сте Да Създадете Незабравими Спомени?',
-      subtitle: 'Присъединете се към хиляди щастливи домакини на събития, които се доверяват на EventSnap да заснеме техните специални моменти',
+      subtitle: 'Присъединете се към хиляди щастливи домакини на събития, които се доверяват на RepoLjubavi да заснеме техните специални моменти',
       button: 'Започнете Вашето Събитие',
     },
     footer: {
-      copyright: '© 2024 EventSnap. Всички права запазени.',
+      copyright: '© 2024 RepoLjubavi. Всички права запазени.',
     },
     about: {
-      title: 'За EventSnap',
+      title: 'За RepoLjubavi',
       subtitle: 'Правим спомените достъпни и споделими',
       story: {
         title: 'Нашата История',
-        text: 'EventSnap се роди от една проста идея: всеки гост на събитие заснема уникални моменти, които заслужават да бъдат споделени. Създадохме платформа, която прави безпроблемно събирането и споделянето на всички тези специални спомени на едно красиво място.',
+        text: 'RepoLjubavi се роди от една проста идея: всеки гост на събитие заснема уникални моменти, които заслужават да бъдат споделени. Създадохме платформа, която прави безпроблемно събирането и споделянето на всички тези специални спомени на едно красиво място.',
       },
       mission: {
         title: 'Нашата Мисия',
@@ -302,7 +302,7 @@ export const translations = {
       info: {
         title: 'Информация за Контакт',
         email: 'Имейл',
-        emailValue: 'здравей@eventsnap.com',
+        emailValue: 'здравей@repoljubavi.com',
         phone: 'Телефон',
         phoneValue: '+359 (2) 123-4567',
         address: 'Адрес',

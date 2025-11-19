@@ -101,3 +101,4 @@ Multi-language support is implemented via a custom Context API solution:
 - This project uses Lovable's component tagger in development mode (see `vite.config.ts`)
 - The dev server listens on all interfaces (`host: "::"`) for container/network access
 - When adding new shadcn/ui components, use the standard shadcn/ui CLI or manually add to `src/components/ui/`
+- That this project uses English, Bulgarian and Serbian, and every feature has to have these
