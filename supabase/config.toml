@@ -1,0 +1,5 @@
+project_id = "your-project-id"
+
+[functions]
+[functions.send-request-email]
+verify_jwt = false # Set to true if you want to require authentication

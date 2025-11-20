@@ -11,7 +11,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import { supabase } from "@/integrations/supabase/client";
 
 const Contact = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -24,6 +24,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
+      // 1. Insert into database
       const { error } = await supabase
         .from('requests')
         .insert([
@@ -35,6 +36,24 @@ const Contact = () => {
         ]);
 
       if (error) throw error;
+
+      // 2. Send emails via edge function
+      try {
+        await supabase.functions.invoke('send-request-email', {
+          body: {
+            email: formData.email,
+            name: formData.name,
+            language: language,
+            details: {
+              message: formData.message,
+              timestamp: new Date().toISOString(),
+            },
+          },
+        });
+      } catch (emailError) {
+        // Log email error but don't fail the submission
+        console.error('Error sending email notification:', emailError);
+      }
 
       toast.success("Message sent! We'll get back to you soon.");
       setFormData({ name: "", email: "", message: "" });
