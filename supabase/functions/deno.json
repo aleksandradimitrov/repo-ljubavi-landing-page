@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "lib": [
+            "deno.window"
+        ],
+        "strict": true
+    },
+    "imports": {
+        "nodemailer": "npm:nodemailer@6.9.13"
+    }
+}

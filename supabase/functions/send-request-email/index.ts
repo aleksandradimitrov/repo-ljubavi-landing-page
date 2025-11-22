@@ -1,4 +1,3 @@
-import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import nodemailer from "npm:nodemailer@6.9.13";
 
 const corsHeaders = {
@@ -50,18 +49,24 @@ const handler = async (req: Request): Promise<Response> => {
 
         const t = translations[language] || translations.en;
 
+        console.log("CREDS", Deno.env.get("SMTP_HOST"))
+        console.log("CREDS", Deno.env.get("SMTP_PORT"))
+        console.log("CREDS", Deno.env.get("SMTP_USER"))
+        console.log("CREDS", Deno.env.get("SMTP_PASS"))
+    
         // Create Transporter
         const transporter = nodemailer.createTransport({
             host: Deno.env.get("SMTP_HOST") || "smtp.gmail.com",
-            port: parseInt(Deno.env.get("SMTP_PORT") || "587"),
-            secure: false, // false for TLS/STARTTLS (port 587)
+            port: parseInt(Deno.env.get("SMTP_PORT") || "465"),
+            secure: true, // true for SSL/TLS (port 465) - required for Gmail
             auth: {
                 user: Deno.env.get("SMTP_USER"),
                 pass: Deno.env.get("SMTP_PASS"),
             },
             tls: {
-                // Do not fail on invalid certs (for development)
-                rejectUnauthorized: true,
+                // Required for Deno/Supabase Edge Functions
+                rejectUnauthorized: false,
+                minVersion: "TLSv1.2",
             },
         });
 
@@ -117,4 +122,4 @@ const handler = async (req: Request): Promise<Response> => {
     }
 };
 
-serve(handler);
+Deno.serve(handler);

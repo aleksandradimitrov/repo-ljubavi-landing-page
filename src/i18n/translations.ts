@@ -66,7 +66,7 @@ export const translations = {
       button: 'Start Your Event',
     },
     footer: {
-      copyright: '© 2024 RepoLjubavi. All rights reserved.',
+      copyright: '© 2025 RepoLjubavi. All rights reserved.',
     },
     about: {
       title: 'About RepoLjubavi',
@@ -102,6 +102,20 @@ export const translations = {
         address: 'Address',
         addressValue: '123 Event Street, Photo City, PC 12345',
       },
+    },
+    errors: {
+      title: 'Something Went Wrong',
+      subtitle: 'An unexpected error occurred. Please try again or return to the home page.',
+      tryAgain: 'Try Again',
+      goHome: 'Go Home',
+      reload: 'Reload Page',
+      network: 'Network error. Please check your internet connection.',
+      timeout: 'Request timeout. Please try again.',
+      serverError: 'Server error. Please try again later.',
+      notFound: 'The requested resource was not found.',
+      unauthorized: 'You are not authorized. Please log in and try again.',
+      forbidden: 'Access forbidden. You do not have permission to perform this action.',
+      generic: 'An unexpected error occurred. Please try again.',
     },
   },
   sr: {
@@ -169,7 +183,7 @@ export const translations = {
       button: 'Počnite Vaš Događaj',
     },
     footer: {
-      copyright: '© 2024 RepoLjubavi. Sva prava zadržana.',
+      copyright: '© 2025 RepoLjubavi. Sva prava zadržana.',
     },
     about: {
       title: 'O RepoLjubavi-u',
@@ -205,6 +219,20 @@ export const translations = {
         address: 'Adresa',
         addressValue: 'Ulica Događaja 123, Grad Fotografija, 12345',
       },
+    },
+    errors: {
+      title: 'Нешто је Пошло Наопако',
+      subtitle: 'Дошло је до неочекиване грешке. Молимо вас, покушајте поново или се вратите на почетну страницу.',
+      tryAgain: 'Покушај Поново',
+      goHome: 'Иди на Почетну',
+      reload: 'Поново Учитај Страницу',
+      network: 'Грешка мреже. Молимо вас, проверите вашу интернет везу.',
+      timeout: 'Истекло је време захтева. Молимо вас, покушајте поново.',
+      serverError: 'Грешка сервера. Молимо вас, покушајте касније.',
+      notFound: 'Тражени ресурс није пронађен.',
+      unauthorized: 'Нисте овлашћени. Молимо вас, пријавите се и покушајте поново.',
+      forbidden: 'Приступ забрањен. Немате дозволу да извршите ову акцију.',
+      generic: 'Дошло је до неочекиване грешке. Молимо вас, покушајте поново.',
     },
   },
   bg: {
@@ -272,7 +300,7 @@ export const translations = {
       button: 'Започнете Вашето Събитие',
     },
     footer: {
-      copyright: '© 2024 RepoLjubavi. Всички права запазени.',
+      copyright: '© 2025 RepoLjubavi. Всички права са запазени.',
     },
     about: {
       title: 'За RepoLjubavi',
@@ -308,6 +336,20 @@ export const translations = {
         address: 'Адрес',
         addressValue: 'ул. Събития 123, Град Снимки, 12345',
       },
+    },
+    errors: {
+      title: 'Нещо Се Обърка',
+      subtitle: 'Възникна неочаквана грешка. Моля, опитайте отново или се върнете на началната страница.',
+      tryAgain: 'Опитайте Отново',
+      goHome: 'Към Началото',
+      reload: 'Презаредете Страницата',
+      network: 'Грешка в мрежата. Моля, проверете вашата интернет връзка.',
+      timeout: 'Изтекло време на заявката. Моля, опитайте отново.',
+      serverError: 'Грешка в сървъра. Моля, опитайте по-късно.',
+      notFound: 'Търсеният ресурс не беше намерен.',
+      unauthorized: 'Не сте упълномощени. Моля, влезте в профила си и опитайте отново.',
+      forbidden: 'Достъпът е забранен. Нямате разрешение да извършите това действие.',
+      generic: 'Възникна неочаквана грешка. Моля, опитайте отново.',
     },
   },
 };
