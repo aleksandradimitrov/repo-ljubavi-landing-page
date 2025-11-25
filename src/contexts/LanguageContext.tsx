@@ -19,6 +19,7 @@ export const LanguageProvider = ({ children }: { children: ReactNode }) => {
     t: translations[language],
   };
 
+
   
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;
